@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skin Pulse — FunPay</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero" aria-labelledby="title">
+        <p class="eyebrow"><span></span> FUNPAY / CS2</p>
+        <h1 id="title">Skin<br /><em>Pulse</em></h1>
+        <p class="subtitle">Свежие предложения скинов — в один клик.</p>
+        <button id="load-button" type="button">
+          <span class="button-dot"></span>
+          <span>Получить цены</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" /></svg>
+        </button>
+        <a class="source-link" href="https://funpay.com/lots/1906/" target="_blank" rel="noreferrer">Источник: FunPay</a>
+      </section>
+
+      <section class="chat-panel" aria-label="Лента результатов">
+        <div class="chat-header"><span class="status-dot"></span><span>Лента лотов</span><span id="result-count" class="count"></span></div>
+        <div id="chat" class="chat" aria-live="polite">
+          <div class="message system-message">Нажмите «Получить цены», чтобы загрузить актуальные предложения.</div>
+        </div>
+      </section>
+    </main>
+    <template id="lot-template">
+      <article class="message lot-message">
+        <div class="message-top"><a class="seller" target="_blank" rel="noreferrer"></a><span class="price"></span></div>
+        <p class="description"></p>
+      </article>
+    </template>
+    <script src="./app.js"></script>
+  </body>
+</html>
